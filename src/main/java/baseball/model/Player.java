@@ -22,7 +22,7 @@ public class Player {
 
     private void validate(String input){
         for(int i = 0; i < input.length(); i++){
-            if(!validateInput(input.charAt(i), input)){
+            if(!isDuplicate(input.charAt(i), input)){
                 throw new IllegalArgumentException(ERROR_DUPLICATED_INPUT);
             }
         }
@@ -36,7 +36,7 @@ public class Player {
         }
     }
 
-    private boolean validateInput(char input, String fullInput){
+    private boolean isDuplicate(char input, String fullInput){
         int count = 0;
         for(int i = 0; i < fullInput.length(); i++){
             if(input == fullInput.charAt(i)){
