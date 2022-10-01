@@ -10,7 +10,7 @@ public class PlayerTest {
     @Test
     @DisplayName("컴퓨터 임의 숫자 생성")
     void generate(){
-        Player computer = new Player();
+        Computer computer = new Computer();
         assertEquals(3, computer.getSize());
     }
 
@@ -25,7 +25,7 @@ public class PlayerTest {
     }
 
     @Test
-    @DisplayName("중복 검사 - 중복값 입")
+    @DisplayName("중복 검사 - 중복값 입력")
     void validateDuplicate(){
         assertThatThrownBy(() -> {
             Player player = new Player("113");
