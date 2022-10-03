@@ -59,7 +59,7 @@ public class OutputView {
         String input = Console.readLine();
 
         if(input.contentEquals("1")){
-            Application.main(new String[]{});
+            return true;
         }
 
         return false;

@@ -18,6 +18,10 @@ public class Baseball {
 
             if(outputView.printOutputView(computer, player)){
                 flag = outputView.restartOrExit();
+
+                if(flag){
+                    computer = new Computer();
+                }
             }
         }
     }

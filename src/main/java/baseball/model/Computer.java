@@ -8,9 +8,11 @@ import java.util.List;
 import static baseball.constant.Constant.INPUT_SIZE;
 
 public class Computer {
-    private final List<Integer> numbers = new ArrayList<>(INPUT_SIZE);
+    private final List<Integer> numbers;
 
     public Computer(){
+        numbers = new ArrayList<>(INPUT_SIZE);
+
         while(numbers.size() < 3){
             int generatedRandomNumber = Randoms.pickNumberInRange(1, 9);
             if(!numbers.contains(generatedRandomNumber)){
